@@ -13,7 +13,7 @@ export default function PaymentScreen(){
     const router = useRouter();
     const [paymentMethod, setPaymentMethod] = useState('');
     const { state, dispatch } = useContext(Store);
-    const {userInfo, cart: {shippingAddress}, } = state;
+    const {cart: {shippingAddress}, } = state;
     useEffect(() => {
         if(!shippingAddress.address){
             router.push('/shipping');

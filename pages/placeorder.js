@@ -25,14 +25,13 @@ import {
   import { useSnackbar } from 'notistack';
   import { getError } from '../utils/error';
   import axios from 'axios';
-  import jsCookie from 'js-cookie';
   import dynamic from 'next/dynamic';
   
   function PlaceOrderScreen() {
     const { enqueueSnackbar } = useSnackbar();
     const [loading, setLoading] = useState(false);
     const router = useRouter();
-    const { state, dispatch } = useContext(Store);
+    const { state} = useContext(Store);
     const {
       userInfo,
       cart: { cartItems, shippingAddress, paymentMethod },
@@ -54,7 +53,7 @@ import {
       }
     }, [cartItems, paymentMethod, router]);
   
-    const placeOrderHandler = async (e) => {
+    const placeOrderHandler = async () => {
       try {
         setLoading(true);
         const { data } = await axios.post(

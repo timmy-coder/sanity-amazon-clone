@@ -1,4 +1,3 @@
-import { LineAxisOutlined } from '@mui/icons-material';
 import nc from 'next-connect';
 import { isAuth } from '../../../utils/auth';
 import config from '../../../utils/config';
