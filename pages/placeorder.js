@@ -54,7 +54,7 @@ import {
       }
     }, [cartItems, paymentMethod, router]);
   
-    const placeOrderHandler = async () => {
+    const placeOrderHandler = async (e) => {
       try {
         setLoading(true);
         const { data } = await axios.post(

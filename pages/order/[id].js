@@ -27,7 +27,7 @@ import {
   import { getError } from '../../utils/error';
   import axios from 'axios';
   import { useSnackbar } from 'notistack';
-  
+  import jsCookie from 'js-cookie';
   function reducer(state, action) {
     switch (action.type) {
       case 'FETCH_REQUEST':
@@ -73,7 +73,7 @@ import {
     } = order;
   
     const router = useRouter();
-    const { state } = useContext(Store);
+    const { state,} = useContext(Store);
     const { userInfo } = state;
   
     const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
@@ -88,7 +88,8 @@ import {
           const { data } = await axios.get(`/api/orders/${orderId}`, {
             headers: { authorization: `Bearer ${userInfo.token}` },
           });
-  
+          dispatch({ type: 'CART_CLEAR' });
+          jsCookie.remove('cartItems');
           dispatch({ type: 'FETCH_SUCCESS', payload: data });
         } catch (err) {
           dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
