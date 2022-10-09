@@ -9,9 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.10.1",
+    "@mui/styles": "^5.9.3",
+    "@paypal/react-paypal-js": "^7.8.1",
+    "@sanity/client": "^3.3.3",
+    "@sanity/image-url": "^1.0.1",
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
     "next": "12.2.5",
+    "next-connect": "^0.13.0",
+    "notistack": "^2.0.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.34.2"
   },
   "devDependencies": {
     "eslint": "8.22.0",
