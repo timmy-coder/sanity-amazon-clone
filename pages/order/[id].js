@@ -23,7 +23,7 @@ import {
   import Layout from '../../components/Layout';
   import classes from '../../utils/classses';
   import { Store } from '../../utils/Store';
-  import { useRouter } from 'next/router';
+  import { useRouter } from 'next/navigation';
   import { getError } from '../../utils/error';
   import axios from 'axios';
   import { useSnackbar } from 'notistack';

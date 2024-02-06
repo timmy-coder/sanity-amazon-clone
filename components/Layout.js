@@ -31,7 +31,7 @@ import classes from '../utils/classses';
 import { useContext, useEffect, useState } from 'react';
 import { Store } from '../utils/Store';
 import jsCookie from 'js-cookie';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation'
 import axios from 'axios';
 import { useSnackbar } from 'notistack';
 import { getError } from '../utils/error';
