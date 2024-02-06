@@ -6,15 +6,17 @@ import Layout from '../components/Layout';
 import NextLink from 'next/link';
 import { useSnackbar } from 'notistack';
 import { Store } from '../utils/Store';
-import { useRouter } from 'next/router';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
 import axios from 'axios';
+
 
 export default function LoginScreen() {
     const { state, dispatch } = useContext(Store);
     const {userInfo } = state;
     const router = useRouter();
-    const {redirect} = router.query;
+    const searchParams = useSearchParams()
+    const redirect = searchParams.get('redirect');
     useEffect(() => {
         if (userInfo){
             router.push(redirect || '/');

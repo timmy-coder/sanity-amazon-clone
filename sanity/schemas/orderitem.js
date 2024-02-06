@@ -23,5 +23,15 @@ export default {
         name: 'price',
         type: 'number',
       },
+      {
+        title: 'slug',
+        name: 'slug',
+        type: 'string',
+      },
+      {
+        name: 'countInStock',
+        title: 'CountInStock',
+        type: 'number',
+    },
     ],
   };

@@ -136,9 +136,9 @@ export default function Layout({ title, description, children }) {
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <AppBar position="static" sx={classes.appbar}>
+          <nav className='sticky bg-[#203040] ' >
             <Toolbar sx={classes.toolbar}>
-              <Box display="flex" alignItems="center">
+              <div className='flex items-center justify-center'>
                 <IconButton
                   edge="start"
                   aria-label="open drawer"
@@ -148,11 +148,10 @@ export default function Layout({ title, description, children }) {
                   <MenuIcon sx={classes.navbarButton} />
                 </IconButton>
                 <NextLink href="/" passHref>
-                  <Link>
-                    <Typography sx={classes.brand}>amazona</Typography>
-                  </Link>
+                    <Typography className='text-white'  sx={classes.brand}>amazona</Typography>
+                  
                 </NextLink>
-              </Box>
+              </div>
               <Drawer
                 anchor="left"
                 open={sidbarVisible}
@@ -174,7 +173,7 @@ export default function Layout({ title, description, children }) {
                       </IconButton>
                     </Box>
                   </ListItem>
-                  <Divider light />
+                  
                   {categories.map((category) => (
                     <NextLink
                       key={category}
@@ -212,14 +211,14 @@ export default function Layout({ title, description, children }) {
                 </form>
               </Box>
   
-              <Box>
+              <div className='flex items-center text-white gap-2'>
                 <Switch
                   checked={darkMode}
                   onChange={darkModeChangeHandler}
                 ></Switch>
                 <NextLink href="/cart" passHref>
                   <Link>
-                    <Typography component="span">
+                    <span className='text-white'>
                       {cart.cartItems.length > 0 ? (
                         <Badge
                           color="secondary"
@@ -230,7 +229,7 @@ export default function Layout({ title, description, children }) {
                       ) : (
                         'Cart'
                       )}
-                    </Typography>
+                    </span>
                   </Link>
                 </NextLink>
                 {userInfo ? (
@@ -267,12 +266,13 @@ export default function Layout({ title, description, children }) {
                   </>
                 ) : (
                   <NextLink href="/login" passHref>
-                    <Link>Login</Link>
+                    <Link> <p className='text-white'>Login</p></Link>
+                   
                   </NextLink>
                 )}
-              </Box>
+              </div>
             </Toolbar>
-          </AppBar>
+          </nav>
           <Container component="main" sx={classes.main}>
             {children}
           </Container>

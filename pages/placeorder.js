@@ -61,8 +61,8 @@ import {
           {
             orderItems: cartItems.map((x) => ({
               ...x,
-              countInStock: undefined,
-              slug: undefined,
+              countInStock: x.countInStock,
+              slug: x.slug,
             })),
             shippingAddress,
             paymentMethod,
