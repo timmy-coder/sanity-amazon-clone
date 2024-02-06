@@ -4,7 +4,7 @@ import CheckOutWizard from '../components/CheckoutWizard';
 import Layout from '../components/Layout';
 import Form from '../components/Form';
 import {useForm, Controller} from 'react-hook-form';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { Store } from '../utils/Store';
 import Cookies from 'js-cookie';
 
