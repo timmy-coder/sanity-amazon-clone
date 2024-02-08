@@ -1,12 +1,10 @@
 import { createTheme } from '@mui/material/styles';
 import {
-  AppBar,
   Badge,
   Box,
   Button,
   Container,
   CssBaseline,
-  Divider,
   Drawer,
   IconButton,
   InputBase,
