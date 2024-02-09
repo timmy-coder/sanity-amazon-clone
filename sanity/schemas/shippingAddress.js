@@ -19,8 +19,8 @@ export default {
         type: 'string',
       },
       {
-        title: 'postalCode',
-        name: 'postalCode',
+        title: 'Phone Number',
+        name: 'phoneNumber',
         type: 'string',
       },
       {

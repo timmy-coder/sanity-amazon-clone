@@ -96,9 +96,10 @@ export default function RegisterScreen() {
                     <ListItem>
                         <Button variant="contained" type="submit" fullWidth color="primary">Register</Button>
                     </ListItem>
-                    <ListItem>
+                    <div className='text-center'>
                         Alread have an account {' '}<NextLink href={`/login?redirect=${redirect || '/'}`} passHref><Link>login</Link></NextLink>
-                    </ListItem>
+                    </div>
+                    
                 </List>
 
             </Form>
